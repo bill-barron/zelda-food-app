@@ -12,9 +12,9 @@ Then you should be able to see the app at http://localhost:3000
 
 If you want to take it one step further and run this in docker, run the following commands
 
-    $ docker build -t bbarron/zelda-recipe-app
+    $ docker build -t bill-barron/zelda-recipe-app .
 
-    $ docker run -p 49160:3000 -d bbarron/zelda-recipe-app
+    $ docker run -p 49160:3000 -d bill-barron/zelda-recipe-app
 
 You should now be able to see the app by browsing to
 

@@ -29,7 +29,6 @@ module.exports.getMaterialHearts = function(material) {
     }
     
     var remainder = material.hp % 4;
-
     var fullHearts = Math.floor(material.hp/4);
     var result = [];
     for(var i = 0; i < fullHearts; i += 1) {
@@ -40,14 +39,6 @@ module.exports.getMaterialHearts = function(material) {
     }
     return result;
 }
-
-
-/* An array filter function that returns unique array values */
-function onlyUnique(value, index, self) { 
-    return self.indexOf(value) === index;
-}
-
-
 
 
 module.exports.getRecipeModel = function(recipe) {
