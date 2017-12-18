@@ -4,19 +4,19 @@ This is a smple dockerized webapp that displays recipes, and ingredients for foo
 
 ## Installation
 
-First test it out on your local host using 
+First clone this repo to your local machine and test it using 
 
-    node index
+    npm start
 
-Then browse to localhost:3000
+Then you should be able to see the app at http://localhost:3000
 
-Next, run the following commands
+If you want to take it one step further and run this in docker, run the following commands
 
     $ docker build -t bbarron/zelda-recipe-app
 
     $ docker run -p 49160:3000 -d bbarron/zelda-recipe-app
 
-You should now be able to browse with
+You should now be able to see the app by browsing to
 
     http://localhost:49160
 
