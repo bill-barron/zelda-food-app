@@ -14,7 +14,7 @@ Next, run the following commands
 
     $ docker build -t bbarron/zelda-recipe-app
 
-    $ docker run -p 49160:3000 -d <your username>/node-web-app
+    $ docker run -p 49160:3000 -d bbarron/zelda-recipe-app
 
 You should now be able to browse with
 
