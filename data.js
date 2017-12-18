@@ -306,7 +306,6 @@ module.exports.ingredients = [
     {id: 152, name: "Any Carrot or Pumpkin"},
     {id: 153, name: "Any Crab"},
     {id: 154, name: "Any Fish"},
-    //{id: 155, name: "Any Flower"},
     {id: 156, name: "Any Fruit"},
     {id: 157, name: "Any Gemstone"},
     {id: 158, name: "Any Herb"},
@@ -510,14 +509,6 @@ module.exports.ingredientOptions = [
     {ingredientId: 154, materialId: 77},   // Any Fish
     {ingredientId: 154, materialId: 78},   // Any Fish
     {ingredientId: 154, materialId: 79},   // Any Fish
-    /*{ingredientId: 155, materialId: 28},   // Any Flower
-    {ingredientId: 155, materialId: 29},   // Any Flower
-    {ingredientId: 155, materialId: 30},   // Any Flower
-    {ingredientId: 155, materialId: 31},   // Any Flower
-    {ingredientId: 155, materialId: 32},   // Any Flower
-    {ingredientId: 155, materialId: 33},   // Any Flower
-    {ingredientId: 155, materialId: 34},   // Any Flower
-    {ingredientId: 155, materialId: 35},   // Any Flower*/
     {ingredientId: 156, materialId: 1},    // Any Fruit
     {ingredientId: 156, materialId: 2},    // Any Fruit
     {ingredientId: 156, materialId: 3},    // Any Fruit
