@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .hero(style="background-image: url(/img/hero.jpg); min-height: 30vw")
+        .hero-inner
+            h1 Breath of the Wild, Cooking Guide
+            p This is a cooking recipe tool for The Legend of Zelda: Breath of the Wild
+    .main
+        .main-inner
+            h2 Information
+            p This site contains information about cooking in The Legend of Zelda: Breath of the Wild. Below is a list of recipes and the ingredients to each recipe. Click on the recipe name to get more information about the recipe, or click on an ingredient to get more information on the ingredient.
+            p Clicking on an ingredient will tell you all the other recipes that can use that ingredient.
+    - var recipeHeader = "Recipes List"
+    include includes/recipe-section.pug
+    include includes/footer.pug

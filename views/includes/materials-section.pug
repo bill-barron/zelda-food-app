@@ -1,0 +1,27 @@
+if(materials)
+    .section
+        .section-inner
+            if(materialsHeader)
+                h2= materialsHeader
+            else
+                h2 Related Materials
+            if(materialsMessage) 
+                p= materialsMessage
+            .filterControl
+                div Filter by material name
+                div
+                    input#materialFilter.tableFilter(type="text")
+            .card-listing.material-listing.filterable(data-filter-field="materialFilter")
+                each material in materials
+                    .card.material
+                        .info
+                            h3
+                                a(href='/materials/' + material.id)= material.name
+                        .value Worth #{material.value} Rupees
+                        if(typeof material.hearts === "string")
+                            .hearts
+                                span= material.hearts
+                        else if(material.hearts.length > 0)
+                            .hearts.show
+                                each heart in material.hearts
+                                    img(src=heart, width="25")

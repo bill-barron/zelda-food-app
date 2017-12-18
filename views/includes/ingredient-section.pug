@@ -1,0 +1,19 @@
+if(ingredients)
+    .section
+        .section-inner
+            if(ingredientHeader)
+                h2= ingredientHeader
+            else
+                h2 Related Ingredients
+            if(ingredientMessage)
+                p= ingredientMessage
+            .filterControl
+                div Filter by ingredient name
+                div
+                    input#ingredientFilter.tableFilter(type="text")
+            .card-listing.ingredient-listing.filterable(data-filter-field="ingredientFilter")
+                each ingredient in ingredients
+                    .card.ingredient
+                        .info
+                            h3
+                                a(href="/ingredients/" + ingredient.id)=ingredient.name

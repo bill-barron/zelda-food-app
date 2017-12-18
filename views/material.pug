@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html
+  head
+    title= material.name
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .main
+      .main-inner
+        h1= "Material: " + material.name
+        //p Material ID: #{material.id}
+        p Worth #{material.value} Rupees
+        .hearts
+          if(typeof material.hearts === "string")
+              span= material.hearts
+          else
+              each heart in material.hearts
+                  img(src=heart, width="25")
+    - var recipeHeader = "Recipes"
+    - var recipeMessage = material.name + " is a material that can be used in the following recipes:"
+    - var recipes = material.recipes
+    include includes/recipe-section.pug
+
+    - var ingredientHeader = "Ingredients"
+    - var ingredientMessage = material.name + " is a material can be used in any recipe that calls for any of the following ingredients"
+    - var ingredients = material.ingredients
+    include includes/ingredient-section.pug
+    include includes/footer.pug

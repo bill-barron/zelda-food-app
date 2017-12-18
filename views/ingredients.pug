@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .main
+        .main-inner
+            h1= header
+            p Cooking ingredients are used to make food. The reason ingredients are different than materials, is that an ingredient is either a specific material or it is a group of related materials that you can choose from. One ingredient could be specific like "an apple", while another could be generic like "Any Fish".
+    - var ingredientHeader = "Ingredients List"
+    include includes/ingredient-section.pug
+    include includes/footer.pug

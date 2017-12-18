@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html
+  head
+    title= recipe.name
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .main
+      .main-inner
+        h1= "Recipe: " + recipe.name
+        //p recipe ID: #{recipe.id}
+    - var ingredientHeader = "Ingredients"
+    - var ingredientMessage = recipe.name + " requires the following ingredients"
+    - var ingredients = recipe.ingredients
+    include includes/ingredient-section.pug
+    include includes/footer.pug
+            

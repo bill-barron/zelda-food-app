@@ -1,0 +1,40 @@
+if(recipes)
+    .section
+        .section-inner
+            if(recipeHeader)
+                h2= recipeHeader
+            else
+                h2 Related Recipes
+            if(recipeMessage)
+                p= recipeMessage
+            .filterControl
+                div Filter by recipe name
+                div
+                    input#recipeFilter.tableFilter(type="text")
+            .card-listing.food-listing.filterable(data-filter-field="recipeFilter")
+                each recipe in recipes
+                    .card.food
+                        .info
+                            h3
+                                a(href="/recipes/" + recipe.id)= recipe.name
+                            //p= recipe.id
+                        table.ingredients(width="100%")
+                            tbody
+                                each recipeIngredient in recipe.ingredients
+                                    - var match = ((material) ? material.ingredients.some(i => i.id === recipeIngredient.id) : ((ingredient) ? ingredient.id === recipeIngredient.id : false));
+                                    if(match)
+                                        tr.match
+                                            //td= recipeIngredient.id
+                                            td
+                                                if(recipeIngredient.id < 150)
+                                                    a(href="/materials/" + recipeIngredient.id)= recipeIngredient.name
+                                                else
+                                                    a(href="/ingredients/" + recipeIngredient.id)= recipeIngredient.name
+                                    else
+                                        tr
+                                            //td= recipeIngredient.id
+                                            td
+                                                if(recipeIngredient.id < 150)
+                                                    a(href="/materials/" + recipeIngredient.id)= recipeIngredient.name
+                                                else
+                                                    a(href="/ingredients/" + recipeIngredient.id)= recipeIngredient.name

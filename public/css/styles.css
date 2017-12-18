@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #09F;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+} 
+
+.hero {
+    background-size: cover;
+    background-position: 50% 50%;
+    box-sizing: border-box;
+    font-size: 2em;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.65);
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        font-size: 1.5em;
+    }
+}
+
+.hero-inner {
+    margin: 0 auto;
+    padding: 2em 1em;
+    width: 100%;
+    max-width: 40em;
+    box-sizing: border-box;
+}
+
+.main {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-inner {
+    margin: 0 auto;
+    
+    width: 100%;
+    max-width: 75em;
+    padding: 2em 1em;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    box-sizing: border-box;
+    background: rgb(80, 101, 218);
+}
+
+.section-inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 75em;
+    
+    padding: 2em 1em;
+    box-sizing: border-box;
+}
+
+.section-inner > h2,
+.section-inner > p {
+    color: #FFF;
+}
+
+.section-inner > p {
+    font-size: 1.5em;
+}
+
+
+.section:nth-of-type(2n) {
+    background: rgb(119, 145, 216)
+}
+
+.section h2 {
+    font-size: 3.5em;
+}
+
+.section .filterControl {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.section .filterControl div {
+    flex: 1 0 250px;
+    max-width: 250px;
+}
+
+.section .filterControl input {
+    border:none;
+    padding: .5em;
+}
+
+.main h1 {
+    font-size: 4em;
+}
+
+.main p {
+    font-size: 2em;
+}
+
+.value {
+    padding: .5em;
+}
+
+.hearts {
+    display: inline-block;
+    padding: .5em;
+    color: #f00;
+}
+
+/* */
+
+.card-listing {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card-listing > .card
+{
+    flex: 0 0 180px;
+    max-width: 240px;
+    min-width: 240px;
+    background: #FFF;
+    margin: 1em;
+    z-index: 2;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 832px) {
+    .card-listing > .card
+    {
+        flex: 1 1 180px;
+        max-width: none;
+    }
+}
+
+.card-listing > .card .info {
+    padding: .5em;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+    background-color: hsl(45, 100%, 70%);
+}
+
+.card-listing > .card .info h3,
+.card-listing > .card .info p
+ {
+    margin:0;
+    padding: 0;
+    color: rgba(66, 66, 66, 1);
+}
+
+.card-listing > .card .info h3 a {
+    display: block;
+    padding: 1em 0;
+    color: rgba(66, 66, 66, 1);
+}
+
+/* --------------
+ * Foods listing 
+ * -------------- */
+
+.food-listing > .food > .ingredients {
+    width: 100%;
+}
+
+.food-listing > .food > .ingredients td {
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+.food-listing > .food > .ingredients a {
+    display: block;
+    padding: 1em;
+    color: rgba(66, 66, 66, 1);
+}
+
+.food-listing > .food > .ingredients .match,
+.food-listing > .food > .ingredients .match a
+ {
+    font-weight: bold;
+    color: rgb(80, 101, 218);
+}
+
+/* --------------
+ * Ingredient listing 
+ * -------------- */
+
+
+/* --------------
+ * Material listing 
+ * -------------- */
+ 
+
+ /* --------------
+ * Page Header 
+ * -------------- */
+body > .header {
+    background-color: rgb(80, 101, 218);
+    position: relative;
+    z-index: 8;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, .3);
+}
+
+body > .header nav {
+    display: block;
+}
+
+body > .header nav > ul {
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+body > .header nav > ul > li {
+    flex: 1 1 120px;
+    max-width: 120px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body > .header nav > ul > li > a {
+    display: block;
+    padding: 1em;
+    color: #FFF;
+}
+
+@media screen and (max-width: 400px) {
+    body > .header nav > ul > li > a {
+        padding: 1em .5em;
+    }
+}
+
+ /* --------------
+ * Page Footer
+ * -------------- */
+
+body > .footer {
+    text-align: center;
+}

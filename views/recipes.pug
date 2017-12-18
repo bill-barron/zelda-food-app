@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .hero
+        img(src="img/cookpot.jpg", width="100%")
+    .main
+        .main-inner
+            h1= header
+    - var recipeHeader = "Recipes List"
+    include includes/recipe-section.pug
+    include includes/footer.pug

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html
+  head
+    title= ingredient.name
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    include includes/header.pug
+    .main
+      .main-inner
+        h1= "Ingredient: " + ingredient.name
+        //p Ingredient ID: #{ingredient.id}
+    - var materialsHeader = "Materials" 
+    - var materialsMessage = (ingredient.materials.length > 1) ? ("The ingredient \"" + ingredient.name + "\" means any of the following materials can be substituted.") : ("There are no substitues possible for recipes that require \"" + ingredient.name + "\"")
+    - var materials = ingredient.materials
+    include includes/materials-section.pug  
+    - var recipeHeader = "Recipes"
+    - var recipeMessage = "Recipes that require \"" + ingredient.name + "\""
+    - var recipes = ingredient.foods
+    include includes/recipe-section.pug     
+    
+    include includes/footer.pug
